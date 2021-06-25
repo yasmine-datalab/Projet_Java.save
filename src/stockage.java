@@ -11,15 +11,16 @@ public class stockage {
         File rep = new File("data/arbres");
         File rep1 = new File("data/personnes");
         File dir = new File("data");
+        if(!(dir.exists())){
+            dir.mkdir();
+            }
         if(!(rep.exists())) {
             rep.mkdir();
         }
         if(!(rep1.exists())) {
             rep1.mkdir();
         }
-        if(!(dir.exists())){
-            dir.mkdir();
-        }
+
     }
     public static String search_file(String id){
         File dir = new File("data/personnes") ;

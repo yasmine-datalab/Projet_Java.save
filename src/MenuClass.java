@@ -184,12 +184,14 @@ public class MenuClass {
 						break;
 					}
 					case 2 : {
-						Scanner sc = new Scanner(System.in);
-						listing.liste_personne(id);
+					    Scanner sc = new Scanner(System.in);
+						/*listing.liste_personne(id);
 						System.out.println("Entrer l'ID :");
 						String id_p = sc.nextLine();
 						Personne p = stockage.recupererPersonne(id_p);
-						a.affichageArbre(p,1);
+						a.affichageArbre(p,1);*/
+
+
 						break;
 					}
 					case 3 : {

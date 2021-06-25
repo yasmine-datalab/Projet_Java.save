@@ -54,6 +54,18 @@ public class arbre implements Serializable {
     }
     public void affichageAbreAsc(Personne p, int n){
 
+        Stack<Personne> pile = new Stack<>();
+         while (p.parent != null){
+
+             pile.add(stockage.recupererPersonne(p.parent));
+
+         }
+         for (Personne pers:pile){
+             for(int i=0;i<pile.size();i++){
+                 System.out.println("\t\t"+pers.id+"\t"+pers.nom+" "+pers.prenom+"\t"+pers.dateNaissance);
+             }
+         }
+
     }
 
 

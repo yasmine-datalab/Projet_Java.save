@@ -7,17 +7,19 @@ import java.util.*;
  */
 public class stockage {
 
-    static int initialisation() {
+        public static void initialisation() {
         File rep = new File("data/arbres");
         File rep1 = new File("data/personnes");
+        File dir = new File("data");
         if(!(rep.exists())) {
             rep.mkdir();
         }
         if(!(rep1.exists())) {
             rep1.mkdir();
         }
-
-        return 1;
+        if(!(dir.exists())){
+            dir.mkdir();
+        }
     }
     public static String search_file(String id){
         File dir = new File("data/personnes") ;

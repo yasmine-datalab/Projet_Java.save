@@ -168,11 +168,12 @@ public class MenuClass {
 				System.out.println("__________________________________________________________________________________________________________________________________");
 				System.out.println("1. Afficher Un Arbre Complet");
 				System.out.println("2. Afficher descendance d'une personne");
-				System.out.println("3. Consulter la fratrie");
-				System.out.println("4. Consulter les cousins");
-				System.out.println("5. Consulter les enfants");
+				System.out.println("3. Afficher Ascendance d'une personne");
+				System.out.println("4. Consulter la fratrie");
+				System.out.println("5. Consulter les cousins");
+				System.out.println("6. Consulter les enfants");
 				//System.out.println("6. Retour");
-				System.out.println("6. Quiter");
+				System.out.println("7. Quiter");
 				System.out.println("__________________________________________________________________________________________________________________________________");
 				System.out.println();
 				monChoix1 = MenuClass.choix();
@@ -196,7 +197,9 @@ public class MenuClass {
 
 						break;
 					}
-					case 3 : {
+					case 3:
+						break;
+					case 4 : {
 						Scanner sc = new Scanner(System.in);
 						listing.liste_personne(id);
 						System.out.println("Entrer l'id: ");
@@ -205,7 +208,7 @@ public class MenuClass {
 						p.afficherFratrie();
 						break;
 					}
-					case 4: {
+					case 5: {
 						Scanner sc = new Scanner(System.in);
 						listing.liste_personne(id);
 						System.out.println("Entrer l'id: ");
@@ -214,7 +217,7 @@ public class MenuClass {
 						p.afficherCousin();
 						break;
 					}
-					case 5 : {
+					case 6 : {
 
 						Scanner sc = new Scanner(System.in);
 						listing.liste_personne(id);
@@ -224,7 +227,7 @@ public class MenuClass {
 						p.afficherEnfant();
 						break;
 					}
-					case 6 :
+					case 7 :
 						System.exit(0);
 						break;
 					default:

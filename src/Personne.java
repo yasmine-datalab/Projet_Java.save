@@ -70,16 +70,15 @@ public class Personne implements Serializable{
         //return 1;
     }
 
-    @Deprecated
+   
     public int ajouterEnfant1(String id){
-        System.out.println(enfants.size());
         if (enfants.isEmpty()){
             enfants.add(id);
         }
         else {
             String aine_id = enfants.getFirst();
             Personne enfantadd = stockage.recupererPersonne(id);
-            System.out.println(enfantadd.dateNaissance);
+            
             //Personne aine = stockage.recupererPersonne(aine_id);
             int ids = 1;
             Personne enf = stockage.recupererPersonne(enfants.getFirst());
@@ -87,8 +86,7 @@ public class Personne implements Serializable{
                  enf = stockage.recupererPersonne(enfants.get(ids));
                  ids += 1;
             }
-            System.out.println(enf.dateNaissance);
-            System.out.println(enfantadd.dateNaissance);
+            
             if(enf.dateNaissance.longValue() <= enfantadd.dateNaissance.longValue()){
                 enfants.add(ids,id);
             }

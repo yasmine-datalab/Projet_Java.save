@@ -43,8 +43,8 @@ public class MenuClass {
 		int cpt =1;
 		int val;
 
-
-		while(true)
+		//boolean ok = true;
+		while( true)
 
 		{	int monChoix1=0;
 			if(cpt==1)
@@ -136,7 +136,8 @@ public class MenuClass {
 				{   cpt = 1;
 
 					MenuClass.afficherAcc();
-
+					
+					//ok = false;
 					break;
 				}
 				if (val ==3)
@@ -173,6 +174,7 @@ public class MenuClass {
 				//System.out.println("6. Retour");
 				System.out.println("6. Quiter");
 				System.out.println("__________________________________________________________________________________________________________________________________");
+				System.out.println();
 				monChoix1 = MenuClass.choix();
 				cpt = cpt+1;
 				arbre a = stockage.recupererArbre(id);

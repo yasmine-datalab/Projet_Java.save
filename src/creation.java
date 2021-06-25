@@ -8,8 +8,8 @@ public class creation {
     public static void creation_arbre(){
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("\t\t CREATION D'UN ARBRE GENEALOGIQUE");
-        System.out.println("Famille: ");
+        System.out.println("\t\t\t\t\t\t CREATION D'UN ARBRE GENEALOGIQUE");
+        System.out.print("Famille: ");
         String label = sc.nextLine();
 
 
@@ -18,14 +18,14 @@ public class creation {
 
         System.out.println();
         System.out.println("\n");
-        System.out.println("\t\t CREATION DE LA PERSONNE RACINE");
-        System.out.println("nom: ");
+        System.out.println("\t\t\t\t\t\t CREATION DE LA PERSONNE RACINE");
+        System.out.print("nom: ");
         String nom = sc.nextLine();
-        System.out.println("prenom: ");
+        System.out.print("prenom: ");
         String prenom = sc.nextLine();
-        System.out.println("Sexe: ");
+        System.out.print("Sexe: ");
         String  sexe = sc.nextLine();
-        System.out.println("Annee de naissance: ");
+        System.out.print("Annee de naissance: ");
         Long naissance = sc.nextLong();
         Personne p = new Personne(nom, prenom, a.id, sexe, naissance);
         System.out.println(p.nom+""+p.prenom);
@@ -42,23 +42,24 @@ public class creation {
         arbre a = stockage.recupererArbre(id);
         Personne p = stockage.recupererPersonne(a.racine);
         Scanner sc = new Scanner(System.in);
-        System.out.println("CREATION d'UNE PERSONNE");
+        System.out.println("\t\t\t\t\t\tCREATION D'UNE PERSONNE");
+        System.out.println();
         System.out.println("Choix du parent ");
 
         listing.liste_personne(id);
-        System.out.println("Entrer l'ID du parent");
+        System.out.print("Entrer l'ID du parent : ");
         String id_p = sc.nextLine();
-        System.out.println("nom: ");
+        System.out.print("nom: ");
         String nom = sc.nextLine();
-        System.out.println("prenom: ");
+        System.out.print("prenom: ");
         String prenom = sc.nextLine();
-        System.out.println("Sexe: ");
+        System.out.print("Sexe: ");
         String  sexe = sc.nextLine();
-        System.out.println("Annee de naissance: ");
+        System.out.print("Annee de naissance: ");
         String naiss= sc.nextLine();
         while (Long.parseLong(naiss) <= p.dateNaissance){
             System.out.println("Erreur! Cette personne est plus agée que son ancêtre");
-            System.out.println("Entrez une année inférieure à "+p.dateNaissance);
+            System.out.print("Entrez une année inférieure à "+p.dateNaissance);
             naiss = sc.nextLine();
         }
         Long naissance = Long.parseLong(naiss);

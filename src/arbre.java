@@ -46,11 +46,12 @@ public class arbre implements Serializable {
 
            for (Personne pers : personnes){
                for (int i=0;i<n;i++){
-                   System.out.print("\t\t");
+                   System.out.print("\t");
                }
                affichageArbre(pers,n+1);
            }
        }
+       //System.out.println();
     }
     public void affichageAbreAsc(Personne p, int n){
 

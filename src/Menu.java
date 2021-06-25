@@ -10,7 +10,7 @@ public class Menu {
 	// Menu Accueil
 
 	MenuClass.afficherAcc();
-	
+	System.out.println();
 	   while(true)
 	   {
 		   stockage.initialisation();
@@ -27,13 +27,14 @@ public class Menu {
 				case 2 : 
 				{	// Menu Modifier Arbre
 					MenuClass.afficheModif();
-					
+					MenuClass.effacer();
+					break;
 				}
 				
 				case 3 : 
 					// Menu afficher Arbre
 					MenuClass.afficherCons();
-					
+					MenuClass.effacer();
 				break;
 				case 4: 
 					System.exit(0);
